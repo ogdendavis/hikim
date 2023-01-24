@@ -1,0 +1,1 @@
+Tidbyt development docs [here](https://github.com/tidbyt/pixlet)
