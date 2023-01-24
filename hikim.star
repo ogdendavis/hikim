@@ -1,0 +1,12 @@
+load("render.star", "render")
+load("encoding/base64.star", "base64")
+
+# base64 encoded pixil art image
+LLAMA = base64.decode("""
+iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACinX6EAAABxklEQVRoQ+2Y7U0DMQyG04WYgA1gEfjdMfgNi8AGTNCFAAu5siw7r52L707XRqpObXJN/OT1R3Jqrf38fW62ne4A7grwXYB8gyTCTX8/gt+4LsDGes8jGE82QAA0SO780VTQDYJ7d4H3p9Zev1rj54gqYRbQLjAyScU7ZPTjy1v7/jhfnwQj2yAA7QLZCSrGk/HUCAA3AlEGwDOCKyidKTi4VBkvDX94PrfL578SVgVgBcY1giVLX8PdFIDlJpXZYhcugAy0+me7jFTD5grQkuylUCuzIKBWPMkCsNJlKAv0gqAMgL2SGdUU1QBk2pTBchGAjO8jA1H/UgWEAMiLASu1eektWix5Ro4YT2vRGYHigNc4depYcVWAJ1Ek3Z7srcVE/y9SQ3gp0XvXCpQuAK8CHN0tuaioYhCEcgCRHUSLzAbQzP9NBeDtuLVzmUVWjp0OoAdhhvQrYEQheIWSmQaXBqrZFV8PHJfFNIaPx3o8/24dluCNUHbn1z4kefcC0fuC1I1QRMJIPVmgaM5SAGjykSxxeABrB9LdKcCrDGfvPM+zWwBSCVXGSwjW7XDk1njxaRDFiWrj0fyovxwAWsDW/TcP4BfjCT4Qt1H6wwAAAABJRU5ErkJggg==
+""")
+
+def main():
+    return render.Root(
+        child = render.Image(LLAMA)
+    )
